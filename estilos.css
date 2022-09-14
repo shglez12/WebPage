@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+a, li{
+    font-family: 'Quicksand';
+    color: black;
+
+}
+
+.logo-idioma img{
+    padding-left: 0%;
+    margin-left: 0;
+    width: 25px;
+}
+
+.logo-header img{
+width: 200px;
+}
+
+header{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.menu ul{
+    margin-left: 10px;
+    display:flex;
+    align-items: center;
+}
+
+.menu li{
+margin-right: 1.5rem;
+}
+
+.menu a:hover{
+    color: #ffa333
+}
+
+.menu-icon img{
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+}
+
+.menu-icon, #check{
+    display: none;
+}
+
+@media(max-width: 768px){
+    .checkbtn{
+        display: block;
+        position: fixed;
+    }
+    .menu-icon{
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .menu ul{
+        display: block;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: white;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+    .menu ul li{
+        padding: 0.8rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .menu ul li:last-child{
+        background: none;
+        padding: 1rem;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        z-index: 2;
+    }
+}
+
+footer{
+    width: 100%;
+    background-color: #ededed;
+    font-family: 'Quicksand';
+}
+
+.container-footer{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+   
+}
+
+.footer-body{
+    display: flex;
+    justify-content: center;
+}
+
+.column-1{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.column-1 h1{
+    font-size: 17px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.column-1 p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.column-2{
+    margin-top: 20px;
+    max-width: 400px;
+
+}
+
+.column-2 h1{
+    font-size: 17px;
+    margin-bottom: 15px;
+    
+}
+
+.redes-sociales{
+    display: flex;
+
+}
+
+.redes-sociales img{
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.column-3 {
+    margin-top: 20px;
+    max-width: 400px;
+    margin-left: 50px;
+}
+
+.column-3 img{
+    width: 200px;
+}
+
+.footer-inferior{
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.footer-inferior h4{
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-inferior p{
+    font-size: 10px;
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 1000px){
+    .footer-body{
+        flex-wrap: wrap;
+    }
+}
+
+.carrusel{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.containt-carrusel img{
+width: 100%;
+}
+
+.containt-carrusel{
+padding: 0;
+margin: 0;
+display: flex;
+width: 400%;
+animation: slider 20s infinite alternate linear;
+}
+
+.containt-carrusel > figure{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    user-select: none;
+}
+
+.containt-carrusel > figure::before{
+    content: attr(aria-label);
+    display:flex;
+    position: absolute;
+    left: 20%;
+    top: 45%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Josefin Sans';
+}
+
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slider{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+.galeria{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.galeria img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.galeria-column{
+    flex: 30%;
+    padding: 5px;
+
+}
+
+@media (max-with:600px){
+    .galeria-column{
+        flex: 100%;
+    } 
+}
+
+@media (max-with:800px){
+    .galeria-column{
+        flex: 30%;
+    } 
+}
+
+.aspirantes-title{
+    background-color: white;
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+    padding: 8px;
+    text-align: center;
+}
+
+.formulario{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+
+}
+
+.formulario::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("recursos/Cover.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(5px);
+	z-index: -1;
+}
+
+.contact-box{
+    max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.4);
+  
+}
+
+.right{
+	background-size: cover;
+	height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.right p{
+    margin-top: 45px;
+    font-family: 'Quicksand';
+    text-align: center;
+    font-size: 16px;
+    color:white;
+}
+
+.left{
+    margin-top: 35px;
+    margin-bottom: 30px;
+    padding: 25px 40px;
+}
+
+h2{
+    font-size: 19px;
+    font-family: 'Quicksand';
+    position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 20px;
+    
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    
+   
+}
+
+.field{
+    font-family: 'Quicksand';
+    width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(250, 250, 250, 1);
+	padding: 0.5rem 1rem;
+	font-size: 0.9rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+
+textarea{
+	min-height: 150px;
+}
+
+.btn-archivo{
+    margin-bottom: 10px;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #ffa333;
+	color: #fff;
+	font-size: 0.9rem;
+    font-family: 'Quicksand';
+	border: #fff;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn-enviar{
+    margin-bottom: 10px;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #fff;
+	color: #ffa333;
+	font-size: 1rem;
+    font-family: 'Quicksand';
+    border: #ffa333;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.right .aspirantes-redes img{
+        width: 26px;
+        height: 26px;
+        margin-top: 10px;
+        margin-left: 30px;  
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+.contacto-title{
+    background: url("recursos/Textura.png") ;
+	background-size: cover;
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+    padding:50px;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.contacto p{
+   margin-left: 60px;
+   margin-right: 60px;
+   font-family: 'Quicksand';
+   padding: 20px;
+   text-align: center;
+   font-size: 16px;
+   color:black;
+}
+
+.form-contacto{
+    width:50%;
+    height: 50%;
+    margin:calc(37vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    position: relative;
+    align-items: center;
+}
+
+.form-contacto input{
+    width: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border:0;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    transition: all .3s;
+    border-bottom: 1px solid gray;
+}
+
+.form-contacto button{
+    justify-content: center;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    margin-left: 48%;
+    font-family: 'Quicksand';
+    font-weight: bolder; 
+    font-size: 21px;
+    background: white;
+    border:none;
+    color: #ffa333;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+.ubicacion{
+    padding: 15px 15px;
+}
+
+.ubicacion h2{
+    text-align: center;
+}
+
+.ubicacion p{
+    padding: 10px 20px;
+}
+
+.card{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  
+}
+
+.card-section{
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  
+}
+
+.card-1{
+    background-color: #fff;
+    padding: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    border:1;
+}
+
+.card-1 .card1-header{
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    text-align: center;
+
+}
+
+.card-1 .card1-body{
+    flex-basis: 100%;
+    margin-top: 1.2rem;
+    font-family: 'Quicksand';
+ 
+    text-align: center;
+}
+
+.card-1 .card1-body p{
+    margin:0;
+}
+
+.card-1:hover{
+    background-color: #ffa333;
+}
+
+.card-2{
+    background-color: #ffa333;
+    padding: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-2 .card2-header{
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.card-2 .card2-body{
+    flex-basis: 100%;
+    margin-top: 1.2rem;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.card-2 .card2-body p{
+    margin:0;
+}
+
+.card-2:hover{
+    background-color: #fff;
+}
+
+.card-3{
+    background-color: #b29762;
+    padding: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.card-3 .card3-header{
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.card-3 .card3-body{
+    flex-basis: 100%;
+    margin-top: 1.2rem;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.card-3 .card3-body p{
+    margin:0;
+}
+
+.card-3:hover{
+    background-color: #fff;
+}
+
+.division-index{
+    background-color: black;
+    color:#fff;
+    padding: 10px 10px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.division-index h2{
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+}
+
+.division-index button{
+    background-color: white;
+    font-size: 15px;
+    border-radius: 24px;
+    padding: 11px 11px;
+    border: none;
+    font-family: 'Quicksand';
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.division-index button:hover{
+    background-color: #fff;
+    color: #ffa333;
+    font-size: 15px;
+    border-radius: 22px;
+    padding: 10px 10px;
+    font-family: 'Quicksand';
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.division-servicios{
+    background-color: #ededed;
+    padding: 10px 10px;
+    text-align: center;
+    margin-top: 10px;  
+}
+
+.division-servicios h2{
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+}
+
+.division-servicios button{
+    background-color: #ffa333;
+    color:#fff;
+    font-size: 15px;
+    border:none;
+    border-radius: 24px;
+    padding: 11px 11px;
+    font-family: 'Quicksand';
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.division-servicios button:hover{
+    background-color: #ffa333;
+    color: black;
+    font-size: 15px;
+    border-radius: 22px;
+    padding: 10px 10px;
+    font-family: 'Quicksand';
+    cursor: pointer;
+    margin-bottom: 5px;
+}
